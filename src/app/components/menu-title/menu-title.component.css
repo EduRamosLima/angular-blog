@@ -1,0 +1,17 @@
+.container__menu-title {
+  margin-top: 3.125rem;
+  margin-bottom: 1.875rem;
+  color: #1a1a1a;
+}
+
+.container__menu-title > h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 227.2px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+/* .container__menu-title > hr {
+  margin: 1rem 0;
+} */

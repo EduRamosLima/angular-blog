@@ -1,0 +1,25 @@
+.container__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__articles {
+  margin: 0 0 30px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.articles__recent-posts {
+  margin-top: 1.875rem;
+}
+
+.articles__recent-posts > h3 {
+  width: 1217px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
