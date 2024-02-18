@@ -1,0 +1,10 @@
+.container__footer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 1216px;
+}
+
+.container__footer > ul {
+  list-style: none;
+}
