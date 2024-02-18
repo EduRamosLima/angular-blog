@@ -1,0 +1,35 @@
+.container__bottom-card {
+  width: 592px;
+  height: 246px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.bottom-card__photo {
+  height: 246px;
+}
+
+.bottom-card__photo > img {
+  min-width: 592px;
+}
+
+.bottom-card__details {
+  margin-top: 2rem;
+  min-width: 592px;
+}
+
+.bottom-card__title > a > h1 {
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.bottom-card__description > p {
+  margin-top: 0.75rem;
+  color: #667085;
+  font-size: 1rem;
+  font-weight: 400;
+}
