@@ -1,0 +1,54 @@
+.container__pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 23rem;
+}
+
+.separator {
+  width: 1216px;
+}
+
+.separator > hr {
+  margin: 2rem 0 1.5rem;
+  opacity: 50%;
+}
+
+.previous-page,
+.next-page {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.previous-page > p,
+.next-page > p {
+  position: relative;
+  top: 1px;
+
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.previous-page > a,
+.next-page > a {
+  height: 20px;
+}
+
+.previous-page > a > img,
+.next-page > a > img {
+  padding: 0.125rem;
+}
+
+.page-numbers > a {
+  margin: 0 0.125rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+
+  max-width: 37px;
+  max-height: 37px;
+}
+
+.page-numbers > a:hover {
+  color: #7f56d9;
+  background-color: #f9f5ff;
+  border-radius: 0.5rem;
+}
