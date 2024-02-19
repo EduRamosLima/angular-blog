@@ -1,17 +1,18 @@
 .container__menu-title {
-  margin-top: 3.125rem;
-  margin-bottom: 1.875rem;
+  margin: 1.5rem 0;
   color: #1a1a1a;
 }
 
 .container__menu-title > h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 227.2px;
+  font-size: 220px;
   font-weight: bold;
   display: flex;
   justify-content: center;
+
+  margin: 0 1.5rem;
 }
 
-/* .container__menu-title > hr {
-  margin: 1rem 0;
-} */
+.container__menu-title > hr {
+  opacity: 50%;
+}

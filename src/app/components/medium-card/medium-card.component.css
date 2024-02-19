@@ -1,0 +1,41 @@
+.medium-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 384px;
+  margin-top: 2rem;
+}
+
+.medium-card__photo > img {
+  width: 384px;
+  min-width: 384px;
+  height: 240px;
+}
+
+.medium-card__details {
+  display: flex;
+  flex-direction: column;
+  /* height: 172px; */
+}
+
+.medium-card__title {
+  display: flex;
+  align-items: center;
+}
+
+.medium-card__title > a > h1 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.medium-card__description {
+  display: flex;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.medium-card__description > p {
+  color: #667085;
+  font-size: 1rem;
+  font-weight: 400;
+}

@@ -1,9 +1,10 @@
 .container__menu-bar {
   display: flex;
   justify-content: space-between;
-  width: 73%;
+  gap: 36rem;
+  width: 100%;
   margin: auto;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
 }
 
 .left-menu-bar,
@@ -33,4 +34,11 @@
 .right-menu-bar {
   display: flex;
   gap: 2rem;
+}
+
+a:hover {
+  /* border-bottom: 1px solid #1a1a1a;
+  border-top: 0.5rem; */
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
 }
