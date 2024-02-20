@@ -1,0 +1,27 @@
+.article__projects {
+  display: grid;
+  grid-template-columns: 7.5% 85% 7.5%;
+}
+
+.title__list-project,
+.content__projects,
+.content__wide-project {
+  grid-column: 2;
+}
+
+.content__projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.footer-align {
+  display: grid;
+  grid-template-columns: 7.5% 85% 7.5%;
+  justify-content: center;
+}
+
+.footer {
+  margin: 4rem 0 2rem;
+  grid-column: 2;
+}
