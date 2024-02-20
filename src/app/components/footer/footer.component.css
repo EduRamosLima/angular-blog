@@ -1,8 +1,7 @@
 .container__footer {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
-  width: 1216px;
+  gap: 1.5rem;
 }
 
 .container__footer > ul {

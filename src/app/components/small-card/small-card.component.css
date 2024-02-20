@@ -1,21 +1,19 @@
 .container__small-card {
   display: flex;
-  flex-direction: row;
   gap: 1.5rem;
-  width: 592px;
+  /* width: 592px; */
   margin-top: 2rem;
 }
 
 .small-card__photo > img {
-  width: 320px;
-  min-width: 320px;
-  height: 200px;
+  /* width: 320px;
+  min-width: 320px; */
+  width: 100%;
 }
 
 .small-card__details {
   display: flex;
   flex-direction: column;
-  height: 200px;
 }
 
 .small-card__title {
@@ -28,10 +26,16 @@
   font-weight: 600;
 }
 
+.small-card__title > a > h1:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
 .small-card__description {
   display: flex;
   align-items: center;
   margin-top: 0.5rem;
+  max-width: 342px;
 }
 
 .small-card__description > p {

@@ -1,7 +1,6 @@
 .container__menu-bar {
   display: flex;
-  justify-content: center;
-  gap: 36rem;
+  justify-content: space-between;
   margin-top: 1rem;
 }
 

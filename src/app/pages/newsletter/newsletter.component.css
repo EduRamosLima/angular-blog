@@ -1,12 +1,18 @@
+.container__body {
+  display: grid;
+  grid-template-columns: 7.5% 85% 7.5%;
+}
+
+.container__body > * {
+  grid-column: 2;
+}
+
 .content__newsletter {
   margin-top: 4rem;
 }
 
 .title__all-blog-posts {
   margin-bottom: 2rem;
-  display: grid;
-  grid-template-columns: repeat(8, 304px);
-  justify-content: center;
 }
 
 .title__all-blog-posts > h3 {
@@ -17,7 +23,7 @@
 
 .articles__all-blog-posts {
   display: grid;
-  grid-template-columns: repeat(3, 384px);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   grid-gap: 2rem;
   justify-content: center;
@@ -25,6 +31,4 @@
 
 .footer {
   margin: 4rem 0 2rem;
-  display: grid;
-  justify-content: center;
 }

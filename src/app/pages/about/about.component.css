@@ -1,23 +1,12 @@
-.about__photo {
+.container__body {
   display: grid;
   grid-template-columns: 7.5% 85% 7.5%;
 }
 
-.about__photo > img {
-  grid-column: 2;
-}
-
-.about__align {
-  display: grid;
-  grid-template-columns: 7.5% 85% 7.5%;
-}
-
-.about__text {
+.container__body > * {
   grid-column: 2;
 }
 
 .footer {
   margin: 4rem 0 2rem;
-  display: grid;
-  justify-content: center;
 }

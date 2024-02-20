@@ -1,20 +1,9 @@
 .container__big-card {
   margin-top: 2rem;
-  /* width: 592px;
-  height: 432px; */
 
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
 }
-
-/* .big-card__photo {
-  height: 228px;
-} */
-
-/* .big-card__photo > img {
-  min-width: 592px;
-} */
 
 .big-card__details {
   margin-top: 2rem;
@@ -26,9 +15,18 @@
   font-weight: 600;
 }
 
+.big-card__title > a > h1:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
 .big-card__description > p {
   margin-top: 0.75rem;
   color: #667085;
   font-size: 1rem;
   font-weight: 400;
+}
+
+.big-card__photo > img {
+  width: 100%;
 }

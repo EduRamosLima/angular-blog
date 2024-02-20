@@ -1,24 +1,16 @@
 <div class="container__bottom-card">
   <div class="bottom-card__photo">
-    <img
-      src="https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=800%2C425"
-      alt=""
-      height="246px"
-      width="100%"
-    />
+    <img src="{{ photoCover }}" alt="" height="246px" />
   </div>
   <div class="bottom-card__details">
     <div class="bottom-card__title">
       <a href="#">
-        <h1>Bottom Blog Post Title</h1>
+        <h1>{{ cardTitle }}</h1>
       </a>
     </div>
     <div class="bottom-card__description">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-        tincidunt, diam sit amet fringilla mollis, nisi tellus hendrerit mauris,
-        vel euismod nunc quam quis odio. Suspendisse libero nisi, pellentesque
-        sed massa id tellus. Curabitur hendrerit elit sit amet orci varius, sed.
+        {{ cardDescription }}
       </p>
     </div>
   </div>

@@ -1,29 +1,67 @@
 <div class="container__body">
-  <header>
+  <header class="navbar">
     <app-menu-bar></app-menu-bar>
   </header>
   <div class="menu__title">
-    <app-menu-title></app-menu-title>
+    <app-menu-title menuTitle="PROJECTS" [fontSize]="'200px'"></app-menu-title>
   </div>
   <div class="article__projects">
     <div class="title__list-project">
       <h2>List Project</h2>
     </div>
     <div class="content__projects">
-      <app-big-card></app-big-card>
-      <app-big-card></app-big-card>
+      <app-big-card
+        photoCover="https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=800%2C425"
+        [photoHeight]="'300px'"
+        cardTitle="Blog Post Title"
+        cardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+    tincidunt, diam sit amet fringilla mollis, nisi tellus hendrerit mauris,
+    vel euismod nunc quam quis odio. Suspendisse libero nisi, pellentesque
+    sed massa id tellus. Curabitur hendrerit elit sit amet orci varius, sed."
+      ></app-big-card>
+      <app-big-card
+        photoCover="https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=800%2C425"
+        [photoHeight]="'300px'"
+        cardTitle="Blog Post Title"
+        cardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+    tincidunt, diam sit amet fringilla mollis, nisi tellus hendrerit mauris,
+    vel euismod nunc quam quis odio. Suspendisse libero nisi, pellentesque
+    sed massa id tellus. Curabitur hendrerit elit sit amet orci varius, sed."
+      ></app-big-card>
     </div>
     <div class="content__wide-project">
-      <app-big-card></app-big-card>
+      <app-big-card
+        photoCover="https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=800%2C425"
+        [photoHeight]="'450px'"
+        cardTitle="Blog Post Title"
+        cardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+    tincidunt, diam sit amet fringilla mollis, nisi tellus hendrerit mauris,
+    vel euismod nunc quam quis odio. Suspendisse libero nisi, pellentesque
+    sed massa id tellus. Curabitur hendrerit elit sit amet orci varius, sed."
+      ></app-big-card>
     </div>
     <div class="content__projects">
-      <app-big-card></app-big-card>
-      <app-big-card></app-big-card>
+      <app-big-card
+        photoCover="https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=800%2C425"
+        [photoHeight]="'300px'"
+        cardTitle="Blog Post Title"
+        cardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+    tincidunt, diam sit amet fringilla mollis, nisi tellus hendrerit mauris,
+    vel euismod nunc quam quis odio. Suspendisse libero nisi, pellentesque
+    sed massa id tellus. Curabitur hendrerit elit sit amet orci varius, sed."
+      ></app-big-card>
+      <app-big-card
+        photoCover="https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=800%2C425"
+        [photoHeight]="'300px'"
+        cardTitle="Blog Post Title"
+        cardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+    tincidunt, diam sit amet fringilla mollis, nisi tellus hendrerit mauris,
+    vel euismod nunc quam quis odio. Suspendisse libero nisi, pellentesque
+    sed massa id tellus. Curabitur hendrerit elit sit amet orci varius, sed."
+      ></app-big-card>
     </div>
   </div>
-  <div class="footer-align">
-    <div class="footer">
-      <app-footer></app-footer>
-    </div>
+  <div class="footer">
+    <app-footer></app-footer>
   </div>
 </div>

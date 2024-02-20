@@ -1,11 +1,9 @@
-.article__projects {
+.container__body {
   display: grid;
   grid-template-columns: 7.5% 85% 7.5%;
 }
 
-.title__list-project,
-.content__projects,
-.content__wide-project {
+.container__body > * {
   grid-column: 2;
 }
 
@@ -15,13 +13,6 @@
   grid-gap: 2rem;
 }
 
-.footer-align {
-  display: grid;
-  grid-template-columns: 7.5% 85% 7.5%;
-  justify-content: center;
-}
-
 .footer {
   margin: 4rem 0 2rem;
-  grid-column: 2;
 }

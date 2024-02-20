@@ -4,17 +4,19 @@
   grid-template-columns: 7.5% 85% 7.5%;
 }
 
-/* .title-align {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+.container__body > * {
   grid-column: 2;
-} */
+}
+
+.articles__others {
+  grid-column: 1;
+}
 
 .article__blog {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto 504px 504px 504px 1008px 304px;
-  grid-column: 2;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  margin-top: 2rem;
 }
 
 .title__blog-post > h1 {
@@ -26,95 +28,20 @@
   grid-column: 1;
 }
 
-/* .articles__others {
-  display: grid;
-} */
-
-.articles__other-1,
-.articles__other-2,
-.articles__other-3,
-.articles__other-4,
-.articles__other-5,
-.articles__other-6,
-.articles__other-7,
-.articles__other-8,
-.articles__other-9,
-.articles__other-10,
-.articles__other-11,
-.articles__other-12 {
+.articles__others {
   display: flex;
-  align-items: center;
   flex-direction: column;
-}
-
-/* .articles__other-1 {
-  grid-row: 1;
-  grid-column: 1;
-}
-
-.articles__other-2 {
-  grid-row: 2;
-  grid-column: 1;
-}
-
-.articles__other-3 {
-  grid-row: 3;
-  grid-column: 1;
-}
-
-.articles__other-4 {
-  grid-row: 4;
-  grid-column: 1;
-}
-
-.articles__other-5 {
-  grid-row: 5;
-  grid-column: 1;
-}
-
-.articles__other-6 {
-  grid-row: 6;
-  grid-column: 1;
-}
-
-.articles__other-7 {
-  grid-row: 7;
-  grid-column: 1;
-}
-
-.articles__other-8 {
-  grid-row: 8;
-  grid-column: 1;
-}
-
-.articles__other-9 {
-  grid-row: 9;
-  grid-column: 1;
-}
-
-.articles__other-10 {
-  grid-row: 10;
-  grid-column: 1;
-}
-
-.articles__other-11 {
-  grid-row: 11;
-  grid-column: 1;
-}
-
-.articles__other-12 {
-  grid-row: 12;
-  grid-column: 1;
-} */
-
-.title__blog-post,
-.content__projects,
-.content__wide-project {
-  grid-column: 2;
+  max-width: 342px;
 }
 
 .title__blog-post {
   grid-row: 1;
+  grid-column: 2;
+}
+
+.container__right {
+  display: grid;
+  grid-template-rows: repeat(9, 500px);
 }
 
 .content__projects {
@@ -126,22 +53,16 @@
 .content__wide-project {
   display: grid;
   grid-template-columns: 1fr;
-  grid-column: 2;
 }
 
 .content__projects-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
-  grid-column: 2;
 }
 
 .content__newsletter {
-  grid-column: 2;
-}
-
-.footer-align {
-  grid-column: 2;
+  margin-top: 5rem;
 }
 
 .footer {

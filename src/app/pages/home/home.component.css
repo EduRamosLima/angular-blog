@@ -1,8 +1,17 @@
+.container__body {
+  display: grid;
+  grid-template-columns: 7.5% 85% 7.5%;
+}
+
+.container__body > * {
+  grid-column: 2;
+}
+
 .container__articles {
   margin: 0 0 4rem;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(2, 592px);
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   grid-gap: 2rem;
 }
@@ -10,12 +19,11 @@
 .articles__recent-posts {
   margin-top: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(8, 304px);
-  justify-content: center;
+  justify-content: left;
 }
 
-.articles__recent-posts > h3 {
-  grid-column: 3;
+.articles__recent-posts > h2 {
+  grid-column: 2;
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -27,8 +35,7 @@
 .title__all-blog-posts {
   margin-bottom: 2rem;
   display: grid;
-  grid-template-columns: repeat(8, 304px);
-  justify-content: center;
+  justify-content: left;
 }
 
 .title__all-blog-posts > h3 {
@@ -39,7 +46,7 @@
 
 .articles__all-blog-posts {
   display: grid;
-  grid-template-columns: repeat(3, 384px);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 2rem;
   justify-content: center;
@@ -48,11 +55,9 @@
 .pagination {
   margin-bottom: 2rem;
   display: grid;
-  justify-content: center;
 }
 
 .footer {
   margin: 2rem 0;
   display: grid;
-  justify-content: center;
 }

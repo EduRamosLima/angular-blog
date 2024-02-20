@@ -1,6 +1,6 @@
 .container__bottom-card {
   display: grid;
-  grid-template-columns: repeat(2, 592px);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   justify-content: center;
 }
@@ -10,18 +10,22 @@
 }
 
 .bottom-card__photo > img {
-  min-width: 592px;
+  width: 100%;
 }
 
 .bottom-card__details {
   margin-top: 2rem;
-  min-width: 592px;
 }
 
 .bottom-card__title > a > h1 {
   margin-top: 0.75rem;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.bottom-card__title > a > h1:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 .bottom-card__description > p {

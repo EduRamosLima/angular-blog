@@ -1,19 +1,16 @@
-<div class="container__small-card">
+<div class="container__small-card" [style.flex-direction]="elementDirection">
   <div class="small-card__photo">
-    <img
-      src="https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=800%2C425"
-      alt=""
-    />
+    <img src="{{ photoCover }}" alt="" [style.height]="photoHeight" />
   </div>
   <div class="small-card__details">
     <div class="small-card__title">
-      <a href="#"><h1>Small Blog Post Title</h1></a>
+      <a href="#"
+        ><h1>{{ cardTitle }}</h1></a
+      >
     </div>
     <div class="small-card__description">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-        tincidunt, diam sit amet fringilla mollis, nisi tellus hendrerit mauris,
-        sed.
+        {{ cardDescription }}
       </p>
     </div>
   </div>
