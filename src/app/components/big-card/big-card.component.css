@@ -1,20 +1,20 @@
 .container__big-card {
   margin-top: 2rem;
-  width: 592px;
-  height: 432px;
+  /* width: 592px;
+  height: 432px; */
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 
-.big-card__photo {
+/* .big-card__photo {
   height: 228px;
-}
+} */
 
-.big-card__photo > img {
+/* .big-card__photo > img {
   min-width: 592px;
-}
+} */
 
 .big-card__details {
   margin-top: 2rem;

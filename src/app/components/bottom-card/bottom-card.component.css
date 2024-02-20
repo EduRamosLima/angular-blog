@@ -1,11 +1,8 @@
 .container__bottom-card {
-  width: 592px;
-  height: 246px;
-
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 592px);
+  grid-gap: 2rem;
+  justify-content: center;
 }
 
 .bottom-card__photo {

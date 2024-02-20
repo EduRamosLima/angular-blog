@@ -12,6 +12,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { BottomCardComponent } from './components/bottom-card/bottom-card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import { AboutComponent } from './pages/about/about.component';
+import { NewsletterComponent } from './pages/newsletter/newsletter.component';
+import { SubscribeNewsComponent } from './components/subscribe-news/subscribe-news.component';
+import { AboutTextComponent } from './components/about-text/about-text.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,13 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     HomeComponent,
     BottomCardComponent,
     FooterComponent,
-    PaginationComponent
+    PaginationComponent,
+    BlogComponent,
+    ProjectsComponent,
+    AboutComponent,
+    NewsletterComponent,
+    SubscribeNewsComponent,
+    AboutTextComponent
   ],
   imports: [
     BrowserModule,

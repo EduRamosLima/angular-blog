@@ -1,9 +1,7 @@
 .container__menu-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 36rem;
-  width: 100%;
-  margin: auto;
   margin-top: 1rem;
 }
 
@@ -37,8 +35,6 @@
 }
 
 a:hover {
-  /* border-bottom: 1px solid #1a1a1a;
-  border-top: 0.5rem; */
   text-decoration: underline;
-  text-underline-offset: 0.5rem;
+  text-underline-offset: 0.4rem;
 }
