@@ -1,0 +1,17 @@
+.about__title {
+  margin-top: 2rem;
+}
+
+.about__title > h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.about__paragraph {
+  margin-top: 0.75rem;
+}
+
+.about__paragraph > p {
+  font-size: 1rem;
+  font-weight: 400;
+}
