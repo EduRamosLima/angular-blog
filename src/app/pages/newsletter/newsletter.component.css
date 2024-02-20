@@ -1,0 +1,30 @@
+.content__newsletter {
+  margin-top: 4rem;
+}
+
+.title__all-blog-posts {
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(8, 304px);
+  justify-content: center;
+}
+
+.title__all-blog-posts > h3 {
+  grid-column: 3;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.articles__all-blog-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 384px);
+  grid-template-rows: auto;
+  grid-gap: 2rem;
+  justify-content: center;
+}
+
+.footer {
+  margin: 4rem 0 2rem;
+  display: grid;
+  justify-content: center;
+}
