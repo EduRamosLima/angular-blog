@@ -1,0 +1,14 @@
+@media screen and (min-width: 1440px) {
+  .about__title > h2 {
+    font-size: 1.5vw;
+  }
+  .about__paragraph > p {
+    font-size: 1vw;
+  }
+  .about__title {
+    margin-top: 2vw;
+  }
+  .about__paragraph {
+    margin-top: 0.75vw;
+  }
+}

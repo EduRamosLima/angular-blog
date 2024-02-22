@@ -1,0 +1,21 @@
+@media screen and (min-width: 1440px) {
+  .medium-card__photo > img {
+    border-radius: 0.5vw;
+    height: 100%;
+  }
+  .medium-card__title > a > h1 {
+    font-size: 1.125vw;
+  }
+  .medium-card__description > p {
+    font-size: 1vw;
+  }
+  .medium-card__details {
+    gap: 0.25vw;
+  }
+  .medium-card {
+    margin-top: 2vw;
+  }
+  .medium-card__title {
+    margin-top: 0.25vw;
+  }
+}

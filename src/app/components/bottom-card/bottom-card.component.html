@@ -1,10 +1,10 @@
 <div class="container__bottom-card">
   <div class="bottom-card__photo">
-    <img src="{{ photoCover }}" alt="" height="246px" />
+    <img src="{{ photoCover }}" alt="" />
   </div>
   <div class="bottom-card__details">
     <div class="bottom-card__title">
-      <a href="#">
+      <a [routerLink]="['blog', Id]">
         <h1>{{ cardTitle }}</h1>
       </a>
     </div>

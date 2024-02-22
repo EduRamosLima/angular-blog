@@ -1,0 +1,20 @@
+@media screen and (min-width: 280px) {
+  .content__projects {
+    grid-template-columns: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content__projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .title__list-project {
+    font-size: 1vw;
+  }
+  .content__projects {
+    gap: 1.5vw;
+  }
+}

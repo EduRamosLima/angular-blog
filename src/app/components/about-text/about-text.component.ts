@@ -3,7 +3,10 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-about-text',
   templateUrl: './about-text.component.html',
-  styleUrl: './about-text.component.css',
+  styleUrls: [
+    './about-text.component.css',
+    './about-text.responsive.component.css',
+  ],
 })
 export class AboutTextComponent implements OnInit {
   @Input()

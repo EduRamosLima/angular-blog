@@ -4,31 +4,36 @@
   margin-top: 1rem;
 }
 
-.left-menu-bar,
-.right-menu-bar {
+.left-menu-bar > ul,
+.right-menu-bar > ul {
   list-style: none;
   margin: 0.625rem 0;
 }
 
-.left-menu-bar > li,
-.right-menu-bar > li {
+.left-menu-bar > ul > li,
+.right-menu-bar > ul > li {
   display: inline-block;
 }
 
-.left-menu-bar > li > a,
-.right-menu-bar > li > a {
+.left-menu-bar > ul > li,
+.right-menu-bar > ul > li > a {
   display: block;
   padding: 0.5rem;
   font-size: 1.25rem;
   font-weight: 500;
 }
 
-.left-menu-bar > li > a {
+.left-menu-bar > ul > li {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
 .right-menu-bar {
+  display: flex;
+  align-items: center;
+}
+
+.right-menu-bar > ul {
   display: flex;
   gap: 2rem;
 }
@@ -36,4 +41,8 @@
 a:hover {
   text-decoration: underline;
   text-underline-offset: 0.4rem;
+}
+
+.right-menu-bar > a {
+  display: none;
 }

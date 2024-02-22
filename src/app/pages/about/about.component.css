@@ -7,6 +7,10 @@
   grid-column: 2;
 }
 
+.app__menu-title[fontSize] {
+  font-size: 160px;
+}
+
 .footer {
   margin: 4rem 0 2rem;
 }

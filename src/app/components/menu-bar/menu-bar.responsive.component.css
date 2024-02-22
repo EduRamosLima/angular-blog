@@ -1,0 +1,39 @@
+@media screen and (min-width: 280px) {
+  .right-menu-bar > ul {
+    display: none;
+  }
+  .right-menu-bar > a {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .right-menu-bar > ul {
+    display: none;
+  }
+  .right-menu-bar > a {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .right-menu-bar > ul {
+    display: flex;
+  }
+  .right-menu-bar > a {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .left-menu-bar > ul > li,
+  .right-menu-bar > ul > li > a {
+    font-size: 1.5vw;
+  }
+  .right-menu-bar > ul {
+    gap: 2vw;
+  }
+  .container__menu-bar {
+    margin: 2vw 0;
+  }
+}

@@ -1,0 +1,55 @@
+@media screen and (min-width: 280px) {
+  .email-input {
+    padding: 1rem;
+  }
+  .newslatter-subscribe > form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+  }
+  .subscribe-button {
+    padding: 1rem;
+    grid-row: 2;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .email-input {
+    width: 100%;
+  }
+  .newslatter-subscribe > form {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .subscribe-button {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .newslatter-description > p {
+    font-size: 1.25vw;
+    font-weight: 400;
+    max-width: 50vw;
+  }
+  .title__subscribe-news > h1 {
+    font-size: 3vw;
+  }
+  .newslatter-tag > p {
+    font-size: 1vw;
+  }
+  .newslatter-subscribe > p {
+    font-size: 0.875vw;
+  }
+  .subscribe-button {
+    font-size: 1vw;
+  }
+  .email-input {
+    font-size: 1vw;
+  }
+  .newslatter-subscribe > form > input {
+    padding: 1vw;
+    border-radius: 0.35vw;
+  }
+}

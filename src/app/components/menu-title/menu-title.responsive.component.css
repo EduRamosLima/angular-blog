@@ -1,0 +1,11 @@
+@media screen and (min-width: 1440px) {
+  .container__menu-title {
+    margin: 1.5vw 0;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container__menu-title > h1 {
+    font-size: 14vw;
+  }
+}

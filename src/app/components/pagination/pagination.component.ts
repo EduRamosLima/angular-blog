@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-pagination',
   templateUrl: './pagination.component.html',
-  styleUrl: './pagination.component.css'
+  styleUrls: [
+    './pagination.component.css',
+    './pagination.responsive.component.css',
+  ],
 })
-export class PaginationComponent {
-
-}
+export class PaginationComponent {}

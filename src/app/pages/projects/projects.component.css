@@ -1,18 +1,5 @@
-.container__body {
-  display: grid;
-  grid-template-columns: 7.5% 85% 7.5%;
-}
-
-.container__body > * {
-  grid-column: 2;
-}
-
 .content__projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-}
-
-.footer {
-  margin: 4rem 0 2rem;
+  gap: 2rem;
 }

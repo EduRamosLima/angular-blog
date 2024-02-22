@@ -8,17 +8,18 @@
 
 .medium-card__photo > img {
   width: 100%;
-  height: 240px;
+  border-radius: 0.5rem;
+  /* height: 240px; */
 }
 
 .medium-card__details {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .medium-card__title {
   display: flex;
-  align-items: center;
 }
 
 .medium-card__title > a > h1 {

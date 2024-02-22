@@ -1,24 +1,31 @@
 .container__small-card {
   display: flex;
+  flex-direction: row;
   gap: 1.5rem;
   /* width: 592px; */
   margin-top: 2rem;
 }
 
+.small-card__photo {
+  min-width: 50%;
+}
+
 .small-card__photo > img {
   /* width: 320px;
   min-width: 320px; */
+  border-radius: 0.5rem;
   width: 100%;
 }
 
 .small-card__details {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 50%;
 }
 
 .small-card__title {
   display: flex;
-  align-items: center;
 }
 
 .small-card__title > a > h1 {
@@ -33,9 +40,8 @@
 
 .small-card__description {
   display: flex;
-  align-items: center;
   margin-top: 0.5rem;
-  max-width: 342px;
+  /* max-width: 342px; */
 }
 
 .small-card__description > p {

@@ -12,10 +12,6 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'blog',
-    component: BlogComponent,
-  },
-  {
     path: 'projects',
     component: ProjectsComponent,
   },
@@ -26,6 +22,10 @@ const routes: Routes = [
   {
     path: 'newsletter',
     component: NewsletterComponent,
+  },
+  {
+    path: 'blog/:id',
+    component: BlogComponent,
   },
 ];
 

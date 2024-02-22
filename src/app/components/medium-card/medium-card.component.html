@@ -1,10 +1,10 @@
 <div class="medium-card">
   <div class="medium-card__photo">
-    <img src="{{ photoCover }}" alt="" [style.height]="photoHeight" />
+    <img src="{{ photoCover }}" alt="" />
   </div>
   <div class="medium-card__details">
     <div class="medium-card__title">
-      <a href="#"
+      <a [routerLink]="['blog', Id]"
         ><h1>{{ cardTitle }}</h1></a
       >
     </div>

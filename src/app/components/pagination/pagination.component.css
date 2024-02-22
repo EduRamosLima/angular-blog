@@ -31,8 +31,10 @@
 
 .previous-page > p,
 .next-page > p {
-  position: relative;
-  top: 1px;
+  /* position: relative;
+  top: 1px; */
+  display: flex;
+  align-items: center;
 
   font-size: 1rem;
   font-weight: 500;
@@ -43,9 +45,9 @@
   height: 20px;
 }
 
-.previous-page > a > img,
-.next-page > a > img {
-  padding: 0.125rem;
+.left-arrow-icon,
+.right-arrow-icon {
+  stroke: grey;
 }
 
 .page-numbers {

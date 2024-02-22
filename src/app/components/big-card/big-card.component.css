@@ -6,11 +6,18 @@
 }
 
 .big-card__details {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.big-card__title {
+  display: flex;
 }
 
 .big-card__title > a > h1 {
-  margin-top: 0.75rem;
+  /* margin-top: 0.75rem; */
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -21,12 +28,13 @@
 }
 
 .big-card__description > p {
-  margin-top: 0.75rem;
+  /* margin-top: 0.75rem; */
   color: #667085;
   font-size: 1rem;
   font-weight: 400;
 }
 
 .big-card__photo > img {
+  border-radius: 0.5rem;
   width: 100%;
 }

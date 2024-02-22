@@ -1,10 +1,10 @@
 <div class="container__small-card" [style.flex-direction]="elementDirection">
   <div class="small-card__photo">
-    <img src="{{ photoCover }}" alt="" [style.height]="photoHeight" />
+    <img src="{{ photoCover }}" alt="" />
   </div>
   <div class="small-card__details">
     <div class="small-card__title">
-      <a href="#"
+      <a [routerLink]="['blog', Id]"
         ><h1>{{ cardTitle }}</h1></a
       >
     </div>

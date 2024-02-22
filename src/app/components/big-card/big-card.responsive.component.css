@@ -1,0 +1,40 @@
+@media screen and (min-width: 280px) {
+  .big-card__title > a > h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 375px) {
+}
+
+@media screen and (min-width: 800px) {
+}
+
+@media screen and (min-width: 1025px) {
+  .big-card__title > a > h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container__big-card {
+    margin-top: 2vw;
+  }
+  .big-card__photo > img {
+    border-radius: 0.5vw;
+    height: 100%;
+  }
+  .big-card__title > a > h1 {
+    font-size: 2vw;
+  }
+  .big-card__description > p {
+    font-size: 1vw;
+    line-height: normal;
+  }
+  .big-card__details {
+    gap: 0.75vw;
+  }
+  .big-card__title {
+    margin-top: 0.75vw;
+  }
+}
