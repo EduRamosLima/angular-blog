@@ -1,3 +1,8 @@
+.night,
+.night > * {
+  background-color: #090d1f;
+}
+
 .container__main {
   display: grid;
   grid-template-columns: 7.5% 85% 7.5%;

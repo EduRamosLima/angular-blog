@@ -1,0 +1,23 @@
+@media screen and (min-width: 280px) {
+  .menu__title > h1 {
+    line-height: normal;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .menu__title > h1 {
+    font-size: 12vw;
+    line-height: 10vw;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .menu__title > h1 {
+    font-size: 12vw;
+  }
+  .about__photo > img {
+    height: 100%;
+    max-height: 34.75vw;
+    margin-top: 2vw;
+  }
+}

@@ -1,12 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #ffffff;
+
+  --background-night-color: #090d1f;
+  --background-light-color: #ffffff;
   color: #1a1a1a;
 
   font-family: "Montserrat", sans-serif;
+}
+
+html,
+html * {
+  color: #1a1a1a;
+  background-color: var(--background-light-color);
+  transition: background-color 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    color 0.45s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+html.night,
+html.night * {
+  color: #ffffff;
+  background-color: var(--background-night-color);
+  transition: background-color 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    color 0.45s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 a {

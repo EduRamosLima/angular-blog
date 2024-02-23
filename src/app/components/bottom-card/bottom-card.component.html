@@ -1,6 +1,11 @@
-<div class="container__bottom-card">
+<div class="container__bottom-card" [style.flex-direction]="elementDirection">
   <div class="bottom-card__photo">
-    <img src="{{ photoCover }}" alt="" />
+    <img
+      src="{{ photoCover }}"
+      alt=""
+      [style.height]="photoHeight"
+      [style.max-height]="photoMaxHeight"
+    />
   </div>
   <div class="bottom-card__details">
     <div class="bottom-card__title">
@@ -9,7 +14,7 @@
       </a>
     </div>
     <div class="bottom-card__description">
-      <p>
+      <p id="paragraphText">
         {{ cardDescription }}
       </p>
     </div>

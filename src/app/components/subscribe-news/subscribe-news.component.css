@@ -45,9 +45,10 @@
   border: 1px solid #60606050;
   outline-offset: 1px;
   outline-color: #60606050;
-  color: #667085;
+  color: #7b8aab;
   font-size: 1rem;
   font-weight: 400;
+  background-color: #ffffff;
 }
 
 .subscribe-button {

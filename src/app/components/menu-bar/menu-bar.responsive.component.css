@@ -2,38 +2,32 @@
   .right-menu-bar > ul {
     display: none;
   }
-  .right-menu-bar > a {
+  .right-menu-bar > button {
     display: block;
   }
 }
 
 @media screen and (min-width: 375px) {
-  .right-menu-bar > ul {
-    display: none;
-  }
-  .right-menu-bar > a {
-    display: block;
-  }
 }
 
 @media screen and (min-width: 800px) {
   .right-menu-bar > ul {
     display: flex;
   }
-  .right-menu-bar > a {
+  .right-menu-bar > button {
     display: none;
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1921px) {
+  .container__menu-bar {
+    margin: 1vw 0;
+  }
   .left-menu-bar > ul > li,
   .right-menu-bar > ul > li > a {
-    font-size: 1.5vw;
+    font-size: 1.25vw;
   }
   .right-menu-bar > ul {
-    gap: 2vw;
-  }
-  .container__menu-bar {
-    margin: 2vw 0;
+    gap: 1.5vw;
   }
 }

@@ -1,16 +1,11 @@
-.container__menu-title {
-  margin: 1.5rem 0;
-  color: #1a1a1a;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .container__menu-title > h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 15vw;
+  font-size: 16.5vw;
   font-weight: bold;
   text-align: center;
+  line-height: normal;
+  overflow: hidden;
+  text-wrap: nowrap;
 }
 
 .container__menu-title > hr {

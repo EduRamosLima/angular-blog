@@ -1,4 +1,8 @@
-<div class="container__small-card" [style.flex-direction]="elementDirection">
+<div
+  class="container__small-card"
+  [style.flex-direction]="elementDirection"
+  [style.margin]="cardMargin"
+>
   <div class="small-card__photo">
     <img src="{{ photoCover }}" alt="" />
   </div>
@@ -9,7 +13,7 @@
       >
     </div>
     <div class="small-card__description">
-      <p>
+      <p id="paragraphText">
         {{ cardDescription }}
       </p>
     </div>

@@ -1,5 +1,31 @@
+.night,
+.night > * {
+  background-color: #090d1f;
+}
+
 .content__projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+}
+
+.menu__title > h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16vw;
+  font-weight: bold;
+  text-align: center;
+  line-height: auto;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+
+.article__projects {
+  display: grid;
+  gap: 2rem;
+}
+
+.title__list-project > h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
 }

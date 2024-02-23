@@ -40,7 +40,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1921px) {
   .page-numbers > a,
   .previous-page > p,
   .next-page > p {
@@ -48,10 +48,13 @@
   }
   .left-arrow-icon,
   .right-arrow-icon {
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 1.15vw;
+    height: 1.15vw;
   }
   .page-numbers {
     gap: 1vw;
+  }
+  .separator > hr {
+    margin: 2vw 0 1.5vw;
   }
 }

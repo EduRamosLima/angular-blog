@@ -1,3 +1,8 @@
+.night,
+.night > * {
+  background-color: #090d1f;
+}
+
 .content__newsletter {
   margin-top: 2rem;
 }

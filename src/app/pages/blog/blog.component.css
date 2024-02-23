@@ -1,12 +1,7 @@
-/* .container__body {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: 7.5% 85% 7.5%;
+.night,
+.night > * {
+  background-color: #090d1f;
 }
-
-.container__body > * {
-  grid-column: 2;
-} */
 
 .content__cover > img {
   border-radius: 0.5rem;
@@ -46,9 +41,10 @@
 }
 
 .container__right {
-  margin-top: 2rem;
+  margin-top: 1.5vw;
   display: flex;
   flex-direction: column;
+  gap: 1.5vw;
 }
 
 .content__projects {

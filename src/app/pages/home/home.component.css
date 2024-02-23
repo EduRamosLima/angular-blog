@@ -1,5 +1,10 @@
+.night,
+.night > * {
+  background-color: #090d1f;
+}
+
 .container__articles {
-  margin-bottom: 4rem;
+  margin: 2rem 0;
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(2, 1fr);
@@ -20,12 +25,13 @@
 }
 
 .articles__others {
-  display: grid;
-  align-content: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .articles__bottom {
-  margin: 0 auto 3rem;
+  margin: 3rem 0;
 }
 
 .title__all-blog-posts {

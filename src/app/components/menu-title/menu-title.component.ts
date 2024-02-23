@@ -13,6 +13,8 @@ export class MenuTitleComponent implements OnInit {
   menuTitle: string = 'THE BLOG';
   @Input()
   fontSize: string = '';
+  @Input()
+  lineHeight: string = '';
 
   constructor() {}
 
