@@ -18,6 +18,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { NewsletterComponent } from './pages/newsletter/newsletter.component';
 import { SubscribeNewsComponent } from './components/subscribe-news/subscribe-news.component';
 import { AboutTextComponent } from './components/about-text/about-text.component';
+import { BigBottomCardComponent } from './components/big-bottom-card/big-bottom-card.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AboutTextComponent } from './components/about-text/about-text.component
     AboutComponent,
     NewsletterComponent,
     SubscribeNewsComponent,
-    AboutTextComponent
+    AboutTextComponent,
+    BigBottomCardComponent
   ],
   imports: [
     BrowserModule,

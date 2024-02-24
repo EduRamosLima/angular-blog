@@ -42,6 +42,12 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .article__blog {
+    grid-template-columns: 1fr 3.5fr;
+  }
+}
+
+@media screen and (min-width: 1921px) {
   .title__blog-post > h1 {
     font-size: 2.25vw;
   }

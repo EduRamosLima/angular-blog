@@ -1,6 +1,6 @@
-<div class="container__bottom-card">
+<div class="container__big-bottom-card">
   <a [routerLink]="['blog', Id]" [style.flex-direction]="elementDirection">
-    <div class="bottom-card__photo">
+    <div class="big-bottom-card__photo">
       <img
         src="{{ photoCover }}"
         alt=""
@@ -8,11 +8,11 @@
         [style.max-height]="photoMaxHeight"
       />
     </div>
-    <div class="bottom-card__details">
-      <div class="bottom-card__title">
+    <div class="big-bottom-card__details">
+      <div class="big-bottom-card__title">
         <h1>{{ cardTitle }}</h1>
       </div>
-      <div class="bottom-card__description">
+      <div class="big-bottom-card__description">
         <p id="paragraphText">
           {{ cardDescription }}
         </p>

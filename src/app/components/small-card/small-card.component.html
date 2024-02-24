@@ -1,21 +1,21 @@
-<div
-  class="container__small-card"
-  [style.flex-direction]="elementDirection"
-  [style.margin]="cardMargin"
->
-  <div class="small-card__photo">
-    <img src="{{ photoCover }}" alt="" />
-  </div>
-  <div class="small-card__details">
-    <div class="small-card__title">
-      <a [routerLink]="['blog', Id]"
-        ><h1>{{ cardTitle }}</h1></a
-      >
+<div class="container__small-card">
+  <a
+    [routerLink]="['blog', Id]"
+    [style.flex-direction]="elementDirection"
+    [style.margin]="cardMargin"
+  >
+    <div class="small-card__photo">
+      <img src="{{ photoCover }}" alt="" />
     </div>
-    <div class="small-card__description">
-      <p id="paragraphText">
-        {{ cardDescription }}
-      </p>
+    <div class="small-card__details">
+      <div class="small-card__title">
+        <h1>{{ cardTitle }}</h1>
+      </div>
+      <div class="small-card__description">
+        <p id="paragraphText">
+          {{ cardDescription }}
+        </p>
+      </div>
     </div>
-  </div>
+  </a>
 </div>

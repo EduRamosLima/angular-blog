@@ -57,10 +57,12 @@
   background-color: #7f56d9;
   font-size: 1rem;
   font-weight: 500;
+  transition: filter 0.3s ease-in-out;
 }
 
 .subscribe-button:hover {
   cursor: pointer;
+  filter: brightness(1.2);
 }
 
 .newslatter-subscribe > p {

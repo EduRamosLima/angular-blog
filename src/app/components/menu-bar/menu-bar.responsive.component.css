@@ -30,4 +30,8 @@
   .right-menu-bar > ul {
     gap: 1.5vw;
   }
+  #lightModeIcon {
+    width: 4vw;
+    height: 2vw;
+  }
 }

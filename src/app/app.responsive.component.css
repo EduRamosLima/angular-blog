@@ -2,25 +2,27 @@
   .container__main {
     grid-template-columns: 5% 90% 5%;
   }
+  .navbar.fixed-header {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 }
 
 @media screen and (min-width: 375px) {
-  /* .container__main {
-    grid-template-columns: 2.5% 95% 2.5%;
-  } */
 }
 
 @media screen and (min-width: 1440px) {
+  .container__main {
+    grid-template-columns: 7.5% 85% 7.5%;
+  }
+  .navbar.fixed-header {
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+  }
 }
 
 @media screen and (min-width: 1600px) {
-  .container__main {
-    grid-template-columns: 10% 80% 10%;
-  }
 }
 
 @media screen and (min-width: 1921px) {
-  .container__main {
-    grid-template-columns: 10% 80% 10%;
-  }
 }

@@ -1,6 +1,11 @@
-<div class="container__main" id="containerMain">
-  <header class="navbar">
+<div
+  class="container__main"
+  [ngClass]="{ 'fixed-header': isFixed }"
+  id="containerMain"
+>
+  <header class="navbar" [ngClass]="{ 'fixed-header': isFixed }">
     <app-menu-bar></app-menu-bar>
+    <hr />
   </header>
   <router-outlet class="main-content" />
   <div class="footer">

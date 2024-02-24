@@ -16,3 +16,26 @@
 .footer {
   grid-column: 2;
 }
+
+.navbar {
+  z-index: 500;
+}
+
+.navbar > hr {
+  display: none;
+}
+
+.navbar.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar.fixed-header > hr {
+  display: block;
+}
+
+.container__main.fixed-header {
+  padding-top: 100px;
+}

@@ -11,5 +11,6 @@
 
 .container__footer > ul > li > a:hover {
   text-decoration: underline;
-  text-underline-offset: 5px;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 3px;
 }

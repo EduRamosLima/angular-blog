@@ -1,17 +1,17 @@
 @media screen and (min-width: 280px) {
-  .container__small-card {
+  .container__small-card > a {
     flex-direction: column;
   }
   .small-card__details {
     width: 100%;
   }
-  .small-card__title > a > h1 {
+  .small-card__title > h1 {
     font-size: 1.125rem;
   }
 }
 
 @media screen and (min-width: 375px) {
-  .container__small-card {
+  .container__small-card > a {
     flex-direction: column;
   }
   .small-card__details {
@@ -21,24 +21,30 @@
 
 @media screen and (min-width: 800px) {
   .container__small-card {
+    transition: transform 0.3s ease-in-out;
+  }
+  .container__small-card > a {
     flex-direction: row;
+  }
+  .container__small-card:hover {
+    transform: scale(1.05);
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .small-card__title > a > h1 {
+  .small-card__title > h1 {
     font-size: 1.125rem;
   }
 }
 
 @media screen and (min-width: 1921px) {
-  .container__small-card {
+  .container__small-card > a {
     gap: 1.5vw;
   }
   .small-card__photo > img {
     border-radius: 0.5vw;
   }
-  .small-card__title > a > h1 {
+  .small-card__title > h1 {
     font-size: 1.125vw;
   }
   .small-card__description > p {

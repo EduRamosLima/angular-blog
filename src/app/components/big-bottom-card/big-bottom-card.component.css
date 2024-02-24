@@ -1,19 +1,21 @@
-.container__bottom-card > a {
+.container__big-bottom-card > a {
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
 
-.bottom-card__photo {
+.big-bottom-card__photo {
   min-width: 50%;
 }
 
-.bottom-card__photo > img {
+.big-bottom-card__photo > img {
   border-radius: 0.5rem;
   width: 100%;
+  height: 100%;
+  max-height: 600px;
 }
 
-.bottom-card__details {
+.big-bottom-card__details {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -21,18 +23,18 @@
   gap: 0.75rem;
 }
 
-.bottom-card__title > h1 {
+.big-bottom-card__title > h1 {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.container__bottom-card:hover h1 {
+.container__big-bottom-card:hover h1 {
   text-decoration: underline;
   text-decoration-thickness: from-font;
   text-underline-offset: 3px;
 }
 
-.bottom-card__description > p {
+.big-bottom-card__description > p {
   color: #7b8aab;
   font-size: 1rem;
   font-weight: 400;

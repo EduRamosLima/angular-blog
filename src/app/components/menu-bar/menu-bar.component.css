@@ -31,6 +31,12 @@
   font-size: 1.25rem;
   text-wrap: nowrap;
   font-weight: 600;
+  transition: transform 0.3s ease-in-out;
+}
+
+.left-menu-bar > ul > li:hover,
+.menu-name:hover {
+  transform: scale(1.2);
 }
 
 .right-menu-bar {
@@ -45,7 +51,8 @@
 
 a:hover {
   text-decoration: underline;
-  text-underline-offset: 0.4rem;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 5px;
 }
 
 .burger-icon {
@@ -68,6 +75,7 @@ a:hover {
 #menuName,
 .close-menu {
   display: none;
+  background-color: transparent;
 }
 
 .menu-options.show-menu > #menuName {
@@ -79,11 +87,9 @@ a:hover {
   background-color: transparent;
 }
 
-/* .container__menu-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
+#toggle-night-mode:hover {
+  cursor: pointer;
+}
 
 .menu-overlay.show-menu {
   position: fixed;
@@ -128,7 +134,7 @@ a:hover {
   top: 2rem;
   border: none;
   padding: 2px;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   background-color: transparent;
 }
 
@@ -156,19 +162,37 @@ ul.menu-options.show-menu {
   transform: scale(1.2);
 }
 
-.night-mode-transition {
-  transition: x 0.5s ease-in-out, fill 0.5s ease-in-out;
+#toggle-mode-circle.light-circle {
+  transform: translateX(56px);
+  fill: #ffffff;
 }
 
-#light-mode-circle {
-  transition: x 0.5s ease, fill 0.5s ease;
+#toggle-mode-circle.night-circle {
+  transform: translateX(16px);
+  fill: #090d1f;
 }
 
+#toggle-mode-bg.light-bg,
+.light-burger {
+  fill: #090d1f;
+}
+
+#toggle-mode-bg.night-bg,
+.night-burger {
+  fill: #ffffff;
+}
+
+#toggle-mode-circle,
 #moon-icon {
-  opacity: 0;
-  transition: opacity 0.25s ease;
+  transition: none;
 }
 
+.night-mode-transition #toggle-mode-circle,
 .night-mode-transition #moon-icon {
-  opacity: 1;
+  transition: transform 0.5s ease, fill 0.5s ease;
+}
+
+.light-mode-transition #toggle-mode-circle,
+.light-mode-transition #moon-icon {
+  transition: transform 0.5s ease, fill 0.5s ease;
 }

@@ -1,26 +1,23 @@
 @media screen and (min-width: 280px) {
-  .container__bottom-card {
+  .container__bottom-card > a {
     flex-direction: column;
   }
   .bottom-card__photo > img {
     height: 100%;
-    max-height: 200px;
+    /* max-height: 200px; */
   }
   .bottom-card__details {
     width: 100%;
   }
-  .bottom-card__title > a > h1 {
+  .bottom-card__title > h1 {
     font-size: 1.5rem;
   }
 }
 
 @media screen and (min-width: 375px) {
-  .container__bottom-card {
+  .container__bottom-card > a {
     flex-direction: column;
   }
-  /* .bottom-card__photo > img {
-    height: 246px;
-  } */
   .bottom-card__details {
     width: 100%;
   }
@@ -28,23 +25,29 @@
 
 @media screen and (min-width: 800px) {
   .container__bottom-card {
+    transition: transform 0.3s ease-in-out;
+  }
+  .container__bottom-card > a {
     flex-direction: column;
+  }
+  .container__bottom-card:hover {
+    transform: scale(1.05);
   }
   .bottom-card__photo > img {
     height: 100%;
-    max-height: 188px;
+    /* max-height: 188px; */
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .container__bottom-card {
+  .container__bottom-card > a {
     flex-direction: row;
   }
   .bottom-card__photo > img {
     height: 100%;
-    max-height: 246px;
+    /* max-height: 246px; */
   }
-  .bottom-card__title > a > h1 {
+  .bottom-card__title > h1 {
     font-size: 2rem;
   }
 }
@@ -53,14 +56,14 @@
   .bottom-card__photo > img {
     border-radius: 0.5vw;
   }
-  .bottom-card__title > a > h1 {
+  .bottom-card__title > h1 {
     font-size: 2vw;
   }
   .bottom-card__description > p {
     font-size: 1vw;
     line-height: normal;
   }
-  .container__bottom-card {
+  .container__bottom-card > a {
     gap: 2vw;
   }
   .bottom-card__details {
@@ -68,6 +71,6 @@
   }
   .bottom-card__photo > img {
     height: 100%;
-    max-height: 15.375vw;
+    /* max-height: 15.375vw; */
   }
 }
