@@ -51,8 +51,8 @@ html.night .close-menu > svg {
 }
 
 html.light .page-numbers > a:hover {
-  color: #683acc;
-  background-color: #f9f5ff;
+  color: #5527b8;
+  background-color: #dfcff8;
 }
 
 html.night .page-numbers > a:hover {
