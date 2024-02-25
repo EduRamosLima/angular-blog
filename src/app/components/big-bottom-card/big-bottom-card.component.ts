@@ -5,7 +5,10 @@ import {
   Input,
   OnInit,
   Renderer2,
+  Inject,
+  PLATFORM_ID,
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-big-bottom-card',
@@ -32,7 +35,11 @@ export class BigBottomCardComponent implements OnInit {
   Id: string = '0';
   originalText!: string;
 
-  constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
+  constructor(
+    private renderer: Renderer2,
+    private elementRef: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -40,28 +47,32 @@ export class BigBottomCardComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    const paragraphElement =
-      this.elementRef.nativeElement.querySelector('#paragraphText');
-    if (paragraphElement) {
-      this.originalText = paragraphElement.innerText.trim();
-      this.toggleTruncateTextClass();
+    if (isPlatformBrowser(this.platformId)) {
+      const paragraphElement =
+        this.elementRef.nativeElement.querySelector('#paragraphText');
+      if (paragraphElement) {
+        this.originalText = paragraphElement.innerText.trim();
+        this.toggleTruncateTextClass();
+      }
     }
   }
 
   toggleTruncateTextClass(): void {
-    const paragraphElement =
-      this.elementRef.nativeElement.querySelector('#paragraphText');
-    if (!paragraphElement) return;
+    if (isPlatformBrowser(this.platformId)) {
+      const paragraphElement =
+        this.elementRef.nativeElement.querySelector('#paragraphText');
+      if (!paragraphElement) return;
 
-    const maxWidthForTruncation = 280;
-    const screenWidth = window.innerWidth;
+      const maxWidthForTruncation = 280;
+      const screenWidth = window.innerWidth;
 
-    if (screenWidth > maxWidthForTruncation) {
-      paragraphElement.classList.add('truncate-text');
-      this.truncateText(paragraphElement);
-    } else {
-      paragraphElement.classList.remove('truncate-text');
-      this.expandText(paragraphElement);
+      if (screenWidth > maxWidthForTruncation) {
+        paragraphElement.classList.add('truncate-text');
+        this.truncateText(paragraphElement);
+      } else {
+        paragraphElement.classList.remove('truncate-text');
+        this.expandText(paragraphElement);
+      }
     }
   }
 

@@ -4,8 +4,11 @@ import {
   ElementRef,
   OnInit,
   Renderer2,
+  Inject,
+  PLATFORM_ID,
 } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-menu-bar',
@@ -26,23 +29,29 @@ export class MenuBarComponent implements OnInit {
   constructor(
     private themeService: ThemeService,
     private renderer: Renderer2,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
     this.themeService.getThemeObservable().subscribe((isDarkMode: boolean) => {
-      this.darkMode = isDarkMode;
-      this.applyTheme(isDarkMode);
+      if (isPlatformBrowser(this.platformId)) {
+        this.darkMode = isDarkMode;
+        this.applyTheme(isDarkMode);
+        this.updateCircleClass();
+        this.updateCircleBackgroundClass();
+        this.updateCloseMenuSvgClass();
+      }
+    });
+
+    if (isPlatformBrowser(this.platformId)) {
+      const isLightModeActive = this.themeService.isLightModeActive();
+      this.darkMode = !isLightModeActive;
+      this.darkModeIconVisible = !isLightModeActive;
       this.updateCircleClass();
       this.updateCircleBackgroundClass();
       this.updateCloseMenuSvgClass();
-    });
-
-    const isLightModeActive = this.themeService.isLightModeActive();
-    this.darkModeIconVisible = !isLightModeActive;
-    this.updateCircleClass();
-    this.updateCircleBackgroundClass();
-    this.updateCloseMenuSvgClass();
+    }
   }
 
   toggleMenu(): void {
@@ -57,23 +66,26 @@ export class MenuBarComponent implements OnInit {
     this.darkModeIconVisible = !this.darkModeIconVisible;
     this.themeService.setTheme(this.darkModeIconVisible);
 
-    const svgIcon = document.getElementById('lightModeIcon') as HTMLElement;
+    if (isPlatformBrowser(this.platformId)) {
+      const svgIcon = document.getElementById(
+        'toggle-mode-circle'
+      ) as HTMLElement;
 
-    if (svgIcon) {
-      svgIcon.classList.toggle(
-        'night-mode-transition',
-        this.darkModeIconVisible
-      );
-      svgIcon.classList.toggle(
-        'light-mode-transition',
-        !this.darkModeIconVisible
-      );
+      if (this.darkModeIconVisible) {
+        svgIcon.classList.remove('light-mode-transition');
+        svgIcon.classList.add('night-mode-transition');
+      } else {
+        svgIcon.classList.remove('night-mode-transition');
+        svgIcon.classList.add('light-mode-transition');
+      }
     }
 
-    const htmlElement = document.documentElement;
-    if (htmlElement) {
-      htmlElement.classList.toggle('night', this.darkModeIconVisible);
-      htmlElement.classList.toggle('light', !this.darkModeIconVisible);
+    if (isPlatformBrowser(this.platformId)) {
+      const htmlElement = document.documentElement;
+      if (htmlElement) {
+        htmlElement.classList.toggle('night', this.darkModeIconVisible);
+        htmlElement.classList.toggle('light', !this.darkModeIconVisible);
+      }
     }
 
     this.themeService.setTheme(this.darkModeIconVisible);
@@ -107,26 +119,35 @@ export class MenuBarComponent implements OnInit {
   }
 
   private updateCircleClass(): void {
-    const circleElement = document.getElementById('toggle-mode-circle');
-
-    if (this.darkMode) {
-      this.renderer.addClass(circleElement, 'night-circle');
-      this.renderer.removeClass(circleElement, 'light-circle');
-    } else {
-      this.renderer.addClass(circleElement, 'light-circle');
-      this.renderer.removeClass(circleElement, 'night-circle');
+    if (isPlatformBrowser(this.platformId)) {
+      const circleElement = this.elementRef.nativeElement.querySelector(
+        '#toggle-mode-circle'
+      );
+      if (circleElement) {
+        if (this.darkMode) {
+          this.renderer.addClass(circleElement, 'night-circle');
+          this.renderer.removeClass(circleElement, 'light-circle');
+        } else {
+          this.renderer.addClass(circleElement, 'light-circle');
+          this.renderer.removeClass(circleElement, 'night-circle');
+        }
+      } else {
+        console.log('Element not found');
+      }
     }
   }
 
   private applyTheme(isDarkMode: boolean): void {
-    const htmlElement = document.documentElement;
-    if (htmlElement) {
-      if (isDarkMode) {
-        htmlElement.classList.add('night');
-        htmlElement.classList.remove('light');
-      } else {
-        if (!htmlElement.classList.contains('night')) {
-          htmlElement.classList.add('light');
+    if (isPlatformBrowser(this.platformId)) {
+      const htmlElement = document.documentElement;
+      if (htmlElement) {
+        if (isDarkMode) {
+          htmlElement.classList.add('night');
+          htmlElement.classList.remove('light');
+        } else {
+          if (!htmlElement.classList.contains('night')) {
+            htmlElement.classList.add('light');
+          }
         }
       }
     }

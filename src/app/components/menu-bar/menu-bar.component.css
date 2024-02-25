@@ -68,8 +68,10 @@ a:hover {
   border: none;
 }
 
-#lightModeIcon {
+#toggle-night-mode,
+#toggle-night-mode * {
   background-color: transparent;
+  outline: none;
 }
 
 #menuName,
@@ -106,7 +108,6 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* background-color: white; */
   width: 100%;
   height: 100%;
   z-index: 1000;
@@ -164,19 +165,21 @@ ul.menu-options.show-menu {
 
 #toggle-mode-circle.light-circle {
   transform: translateX(56px);
-  fill: #ffffff;
+  /* fill: #ffffff; */
 }
 
 #toggle-mode-circle.night-circle {
   transform: translateX(16px);
-  fill: #090d1f;
+  /* fill: #090d1f; */
 }
 
+#toggle-mode-circle.night-circle,
 #toggle-mode-bg.light-bg,
 .light-burger {
   fill: #090d1f;
 }
 
+#toggle-mode-circle.light-circle,
 #toggle-mode-bg.night-bg,
 .night-burger {
   fill: #ffffff;
@@ -187,12 +190,9 @@ ul.menu-options.show-menu {
   transition: none;
 }
 
-.night-mode-transition #toggle-mode-circle,
-.night-mode-transition #moon-icon {
-  transition: transform 0.5s ease, fill 0.5s ease;
-}
-
-.light-mode-transition #toggle-mode-circle,
-.light-mode-transition #moon-icon {
-  transition: transform 0.5s ease, fill 0.5s ease;
+#toggle-mode-circle.light-mode-transition,
+#moon-icon.light-mode-transition,
+#toggle-mode-circle.night-mode-transition,
+#moon-icon.night-mode-transition {
+  transition: transform 0.5s ease, fill 0.5s ease !important;
 }

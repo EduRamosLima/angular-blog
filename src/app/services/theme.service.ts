@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
@@ -9,14 +10,17 @@ export class ThemeService {
   private themeSubject: BehaviorSubject<boolean>;
   private themeResolved: boolean = false;
 
-  constructor() {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     const initialTheme = this.getInitialTheme();
     this.themeSubject = new BehaviorSubject<boolean>(initialTheme);
     this.themeResolved = true;
   }
 
   private getInitialTheme(): boolean {
-    if (typeof localStorage !== 'undefined') {
+    if (
+      isPlatformBrowser(this.platformId) &&
+      typeof localStorage !== 'undefined'
+    ) {
       const storedTheme = localStorage.getItem(this.THEME_KEY);
       return storedTheme ? JSON.parse(storedTheme) : false;
     } else {
@@ -29,7 +33,10 @@ export class ThemeService {
   }
 
   setTheme(isDarkMode: boolean): void {
-    if (typeof localStorage !== 'undefined') {
+    if (
+      isPlatformBrowser(this.platformId) &&
+      typeof localStorage !== 'undefined'
+    ) {
       localStorage.setItem(this.THEME_KEY, JSON.stringify(isDarkMode));
       this.themeSubject.next(isDarkMode);
     }
@@ -49,7 +56,11 @@ export class ThemeService {
   }
 
   isLightModeActive(): boolean {
-    const htmlElement = document.documentElement;
-    return htmlElement.classList.contains('light');
+    if (isPlatformBrowser(this.platformId)) {
+      const htmlElement = document.documentElement;
+      return htmlElement.classList.contains('light');
+    } else {
+      return false;
+    }
   }
 }
