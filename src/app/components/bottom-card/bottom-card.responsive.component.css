@@ -31,7 +31,7 @@
     flex-direction: column;
   }
   .container__bottom-card:hover {
-    transform: scale(1.025);
+    transform: scale(1.015);
   }
   .bottom-card__photo > img {
     height: 100%;
@@ -47,9 +47,6 @@
     height: 100%;
     /* max-height: 246px; */
   }
-  .bottom-card__title > h1 {
-    font-size: 2rem;
-  }
 }
 
 @media screen and (min-width: 1921px) {
@@ -57,7 +54,7 @@
     border-radius: 0.5vw;
   }
   .bottom-card__title > h1 {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
   .bottom-card__description > p {
     font-size: 1vw;

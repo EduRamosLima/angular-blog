@@ -8,6 +8,7 @@ import {
   Inject,
   PLATFORM_ID,
 } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -21,6 +22,8 @@ import { isPlatformBrowser } from '@angular/common';
 export class SmallCardComponent implements OnInit {
   @Input()
   elementDirection: string = '';
+  @Input()
+  hrefLink: string | null = null;
   @Input()
   photoCover: string = '';
   @Input()
@@ -36,6 +39,7 @@ export class SmallCardComponent implements OnInit {
   originalText!: string;
 
   constructor(
+    private route: ActivatedRoute,
     private renderer: Renderer2,
     private elementRef: ElementRef,
     @Inject(PLATFORM_ID) private platformId: Object
@@ -57,6 +61,15 @@ export class SmallCardComponent implements OnInit {
         this.toggleTruncateTextClass();
       }
     }
+  }
+
+  isOnBlogPage(): boolean {
+    const urlSegments = this.route.snapshot.url;
+    return (
+      urlSegments.length > 1 &&
+      urlSegments[0].path === 'blog' &&
+      !isNaN(+urlSegments[1].path)
+    );
   }
 
   toggleTruncateTextClass(): void {

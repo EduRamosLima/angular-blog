@@ -14,6 +14,8 @@ export class MediumCardComponent implements OnInit {
   // @Input()
   // photoHeight: string = '240px';
   @Input()
+  hrefLink: string | null = null;
+  @Input()
   cardTitle: string = '';
   @Input()
   cardDescription: string = '';

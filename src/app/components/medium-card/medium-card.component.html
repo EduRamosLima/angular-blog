@@ -1,17 +1,32 @@
 <div class="medium-card">
-  <a [routerLink]="['blog', Id]">
-    <div class="medium-card__photo">
-      <img src="{{ photoCover }}" alt="" />
-    </div>
-    <div class="medium-card__details">
-      <div class="medium-card__title">
-        <h1>{{ cardTitle }}</h1>
+  <ng-container *ngIf="hrefLink; else routerLinkTemplate">
+    <a [attr.href]="hrefLink" target="_blank">
+      <div class="medium-card__photo">
+        <img [src]="photoCover" alt="" />
       </div>
-      <div class="medium-card__description">
-        <p>
-          {{ cardDescription }}
-        </p>
+      <div class="medium-card__details">
+        <div class="medium-card__title">
+          <h1>{{ cardTitle }}</h1>
+        </div>
+        <div class="medium-card__description">
+          <p>{{ cardDescription }}</p>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
+  </ng-container>
+  <ng-template #routerLinkTemplate>
+    <a [routerLink]="['/blog', Id]" [queryParamsHandling]="'merge'">
+      <div class="medium-card__photo">
+        <img [src]="photoCover" alt="" />
+      </div>
+      <div class="medium-card__details">
+        <div class="medium-card__title">
+          <h1>{{ cardTitle }}</h1>
+        </div>
+        <div class="medium-card__description">
+          <p>{{ cardDescription }}</p>
+        </div>
+      </div>
+    </a>
+  </ng-template>
 </div>

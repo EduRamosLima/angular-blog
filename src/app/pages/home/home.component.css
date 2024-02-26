@@ -1,5 +1,5 @@
 .container__articles {
-  margin: 2rem 0;
+  margin: 1rem 0 2rem;
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(2, 1fr);
@@ -47,6 +47,11 @@
   grid-template-rows: repeat(2, 1fr);
   column-gap: 2rem;
   justify-content: center;
+}
+
+.title__all-blog-posts.no-content,
+.articles__all-blog-posts.no-content {
+  display: none;
 }
 
 .pagination {

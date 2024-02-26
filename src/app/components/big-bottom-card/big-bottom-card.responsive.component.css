@@ -21,14 +21,11 @@
     flex-direction: column;
   }
   .container__big-bottom-card:hover {
-    transform: scale(1.025);
+    transform: scale(1.015);
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .big-bottom-card__title > h1 {
-    font-size: 2rem;
-  }
 }
 
 @media screen and (min-width: 1921px) {
@@ -38,7 +35,7 @@
     max-height: 37.5vw;
   }
   .big-bottom-card__title > h1 {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
   .big-bottom-card__description > p {
     font-size: 1vw;

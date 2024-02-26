@@ -1,9 +1,20 @@
+@media screen and (min-width: 280px) {
+  .medium-card__photo > img {
+    height: 100%;
+    max-height: none;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .medium-card {
     transition: transform 0.3s ease-in-out;
   }
   .medium-card:hover {
-    transform: scale(1.025);
+    transform: scale(1.015);
+  }
+  .medium-card__photo > img {
+    height: 100%;
+    max-height: 13vw;
   }
 }
 
@@ -12,7 +23,7 @@
     border-radius: 0.5vw;
   }
   .medium-card__title > h1 {
-    font-size: 1.125vw;
+    font-size: 1.25vw;
   }
   .medium-card__description > p {
     font-size: 1vw;

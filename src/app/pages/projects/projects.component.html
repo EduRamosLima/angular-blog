@@ -7,22 +7,20 @@
   <div class="title__list-project">
     <h1>List Project</h1>
   </div>
-  <div class="content__projects">
-    <app-big-card
+  <div class="content__projects-1">
+    <!-- <app-big-card
       photoCover="https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=800%2C425"
       cardTitle="Blog Post Title"
       cardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
     tincidunt, diam sit amet fringilla mollis, nisi tellus hendrerit mauris,
     vel euismod nunc quam quis odio. Suspendisse libero nisi, pellentesque
     sed massa id tellus. Curabitur hendrerit elit sit amet orci varius, sed."
-    ></app-big-card>
+    ></app-big-card> -->
     <app-big-card
-      photoCover="https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=800%2C425"
-      cardTitle="Blog Post Title"
-      cardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-    tincidunt, diam sit amet fringilla mollis, nisi tellus hendrerit mauris,
-    vel euismod nunc quam quis odio. Suspendisse libero nisi, pellentesque
-    sed massa id tellus. Curabitur hendrerit elit sit amet orci varius, sed."
+      [hrefLink]="true ? 'https://github.com/EduRamosLima/angular-blog' : null"
+      photoCover="../../assets/img/pokedex-js.png"
+      cardTitle="Pokedex Js"
+      cardDescription="Projeto sobre montar uma pokedex utilizando pokeapi, mostrando todos os pokemons da primeira geração e detalhes sobre os mesmos."
     ></app-big-card>
   </div>
   <div class="content__wide-project">
@@ -37,19 +35,8 @@
       sed massa id tellus. Curabitur hendrerit elit sit amet orci varius, sed."
       ></app-big-bottom-card>
     </div>
-    <div class="wide-project-2">
-      <app-bottom-card
-        elementDirection="column"
-        photoCover="https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=800%2C425"
-        cardTitle="Blog Post Title"
-        cardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-    tincidunt, diam sit amet fringilla mollis, nisi tellus hendrerit mauris,
-    vel euismod nunc quam quis odio. Suspendisse libero nisi, pellentesque
-    sed massa id tellus. Curabitur hendrerit elit sit amet orci varius, sed."
-      ></app-bottom-card>
-    </div>
   </div>
-  <div class="content__projects">
+  <div class="content__projects-2">
     <app-big-card
       photoCover="https://github.blog/wp-content/uploads/2024/01/Productivity-DarkMode-3.png?resize=800%2C425"
       cardTitle="Blog Post Title"

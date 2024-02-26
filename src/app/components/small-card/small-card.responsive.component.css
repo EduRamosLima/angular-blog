@@ -27,13 +27,23 @@
     flex-direction: row;
   }
   .container__small-card:hover {
-    transform: scale(1.025);
+    transform: scale(1.015);
   }
 }
 
 @media screen and (min-width: 1025px) {
   .small-card__title > h1 {
     font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .small-card__title > h1 {
+    font-size: 1.125rem;
+  }
+  .small-card__photo > img {
+    height: 100%;
+    max-height: 12.5vw;
   }
 }
 

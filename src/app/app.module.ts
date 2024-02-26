@@ -19,6 +19,7 @@ import { NewsletterComponent } from './pages/newsletter/newsletter.component';
 import { SubscribeNewsComponent } from './components/subscribe-news/subscribe-news.component';
 import { AboutTextComponent } from './components/about-text/about-text.component';
 import { BigBottomCardComponent } from './components/big-bottom-card/big-bottom-card.component';
+import { SafeHtmlPipe } from './safe-html.pipe';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { BigBottomCardComponent } from './components/big-bottom-card/big-bottom-
     NewsletterComponent,
     SubscribeNewsComponent,
     AboutTextComponent,
-    BigBottomCardComponent
+    BigBottomCardComponent,
+    SafeHtmlPipe
   ],
   imports: [
     BrowserModule,

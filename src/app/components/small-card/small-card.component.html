@@ -1,21 +1,42 @@
 <div class="container__small-card">
-  <a
-    [routerLink]="['blog', Id]"
-    [style.flex-direction]="elementDirection"
-    [style.margin]="cardMargin"
-  >
-    <div class="small-card__photo">
-      <img src="{{ photoCover }}" alt="" />
-    </div>
-    <div class="small-card__details">
-      <div class="small-card__title">
-        <h1>{{ cardTitle }}</h1>
+  <ng-container *ngIf="hrefLink; else routerLinkTemplate">
+    <a
+      [attr.href]="hrefLink"
+      target="_blank"
+      [style.flex-direction]="elementDirection"
+      [style.margin]="cardMargin"
+    >
+      <div class="small-card__photo">
+        <img [src]="photoCover" alt="" />
       </div>
-      <div class="small-card__description">
-        <p id="paragraphText">
-          {{ cardDescription }}
-        </p>
+      <div class="small-card__details">
+        <div class="small-card__title">
+          <h1>{{ cardTitle }}</h1>
+        </div>
+        <div class="small-card__description">
+          <p id="paragraphText">{{ cardDescription }}</p>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
+  </ng-container>
+  <ng-template #routerLinkTemplate>
+    <a
+      [routerLink]="['/blog', Id]"
+      [queryParamsHandling]="'merge'"
+      [style.flex-direction]="elementDirection"
+      [style.margin]="cardMargin"
+    >
+      <div class="small-card__photo">
+        <img [src]="photoCover" alt="" />
+      </div>
+      <div class="small-card__details">
+        <div class="small-card__title">
+          <h1>{{ cardTitle }}</h1>
+        </div>
+        <div class="small-card__description">
+          <p id="paragraphText">{{ cardDescription }}</p>
+        </div>
+      </div>
+    </a>
+  </ng-template>
 </div>

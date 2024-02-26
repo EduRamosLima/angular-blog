@@ -28,10 +28,10 @@
     font-size: 1.25vw;
   }
   .right-menu-bar > ul {
-    gap: 1.5vw;
+    gap: 1.4vw;
   }
   #lightModeIcon {
-    width: 4vw;
+    width: 5vw;
     height: 2vw;
   }
 }

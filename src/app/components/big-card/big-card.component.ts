@@ -18,6 +18,8 @@ export class BigCardComponent implements OnInit {
   @Input()
   cardDescription: string = '';
   @Input()
+  hrefLink: string | null = null;
+  @Input()
   Id: string = '0';
 
   constructor() {}

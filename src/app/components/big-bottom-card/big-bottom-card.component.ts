@@ -22,6 +22,8 @@ export class BigBottomCardComponent implements OnInit {
   @Input()
   elementDirection: string = '';
   @Input()
+  hrefLink: string | null = null;
+  @Input()
   photoCover: string = '';
   @Input()
   photoHeight: string = '';

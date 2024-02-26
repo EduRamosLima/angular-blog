@@ -2,12 +2,6 @@
   .content__projects {
     grid-template-columns: none;
   }
-  .wide-project-1 {
-    display: flex;
-  }
-  .wide-project-2 {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -28,16 +22,11 @@
 @media screen and (min-width: 1600px) {
   .menu__title > h1 {
     font-size: 14.5vw;
+    line-height: 13vw;
   }
 }
 
 @media screen and (min-width: 1921px) {
-  .wide-project-1 {
-    display: none;
-  }
-  .wide-project-2 {
-    display: flex;
-  }
   .content__projects {
     gap: 2vw;
   }

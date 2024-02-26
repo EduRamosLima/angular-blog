@@ -30,6 +30,16 @@ html.transition * {
     color 0.45s cubic-bezier(0.445, 0.05, 0.55, 0.95) !important;
 }
 
+html.light p,
+html.light span {
+  color: #16171a !important;
+}
+
+html.night p,
+html.night span {
+  color: #c8d8fb !important;
+}
+
 html #moon-icon {
   display: none;
 }
@@ -58,4 +68,41 @@ html.night .page-numbers > a:hover {
 
 a {
   text-decoration: none;
+}
+
+.link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-wrap: nowrap;
+}
+
+.content__description p span {
+  padding-left: 0;
+}
+
+html .hidden {
+  display: none;
+}
+
+.content__description p span.strength {
+  color: #e05030 !important;
+}
+
+.content__description p span.dexterity {
+  color: #70ff70 !important;
+}
+
+.content__description p span.intelligence {
+  color: #7070ff !important;
+}
+
+@media screen and (min-width: 480px) {
+  html .content__description p span {
+    padding-left: 2rem;
+  }
+  html .content__description p span.strength,
+  html .content__description p span.dexterity,
+  html .content__description p span.intelligence {
+    padding-left: 0;
+  }
 }

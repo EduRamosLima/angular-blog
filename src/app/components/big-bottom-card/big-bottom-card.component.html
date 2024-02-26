@@ -1,22 +1,54 @@
 <div class="container__big-bottom-card">
-  <a [routerLink]="['blog', Id]" [style.flex-direction]="elementDirection">
-    <div class="big-bottom-card__photo">
-      <img
-        src="{{ photoCover }}"
-        alt=""
-        [style.height]="photoHeight"
-        [style.max-height]="photoMaxHeight"
-      />
-    </div>
-    <div class="big-bottom-card__details">
-      <div class="big-bottom-card__title">
-        <h1>{{ cardTitle }}</h1>
+  <ng-container *ngIf="hrefLink; else routerLinkTemplate">
+    <a
+      [attr.href]="hrefLink"
+      target="_blank"
+      [style.flex-direction]="elementDirection"
+    >
+      <div class="big-bottom-card__photo">
+        <img
+          [src]="photoCover"
+          alt=""
+          [style.height]="photoHeight"
+          [style.max-height]="photoMaxHeight"
+        />
       </div>
-      <div class="big-bottom-card__description">
-        <p id="paragraphText">
-          {{ cardDescription }}
-        </p>
+      <div class="big-bottom-card__details">
+        <div class="big-bottom-card__title">
+          <h1>{{ cardTitle }}</h1>
+        </div>
+        <div class="big-bottom-card__description">
+          <p id="paragraphText">
+            {{ cardDescription }}
+          </p>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
+  </ng-container>
+  <ng-template #routerLinkTemplate>
+    <a
+      [routerLink]="['/blog', Id]"
+      [queryParamsHandling]="'merge'"
+      [style.flex-direction]="elementDirection"
+    >
+      <div class="big-bottom-card__photo">
+        <img
+          [src]="photoCover"
+          alt=""
+          [style.height]="photoHeight"
+          [style.max-height]="photoMaxHeight"
+        />
+      </div>
+      <div class="big-bottom-card__details">
+        <div class="big-bottom-card__title">
+          <h1>{{ cardTitle }}</h1>
+        </div>
+        <div class="big-bottom-card__description">
+          <p id="paragraphText">
+            {{ cardDescription }}
+          </p>
+        </div>
+      </div>
+    </a>
+  </ng-template>
 </div>

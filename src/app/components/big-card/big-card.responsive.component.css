@@ -12,14 +12,11 @@
     transition: transform 0.3s ease-in-out;
   }
   .container__big-card:hover {
-    transform: scale(1.025);
+    transform: scale(1.015);
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .big-card__title > h1 {
-    font-size: 2rem;
-  }
 }
 
 @media screen and (min-width: 1921px) {
@@ -30,7 +27,7 @@
     border-radius: 0.5vw;
   }
   .big-card__title > h1 {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
   .big-card__description > p {
     font-size: 1vw;

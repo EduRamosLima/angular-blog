@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'blog/:id',
     component: BlogComponent,
   },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
 
 @NgModule({
